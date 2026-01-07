@@ -1,14 +1,15 @@
 import React from 'react'
 
 interface Props {
-  params: {
+  params: Promise<{
     productId: string
-  }
+  }>
 }
 
-const page = ({ params }: Props) => {
+const page = async ({ params }: Props) => {
+  const { productId } = await params;
   return (
-    <div>Single Product Page {params.productId}</div>
+    <div>Single Product Page {productId}</div>
   )
 }
 
