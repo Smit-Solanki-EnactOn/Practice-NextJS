@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+      images: [ `${baseUrl}/images/about.jpg` ],
     },
     {
       url: `${baseUrl}/blog`,
