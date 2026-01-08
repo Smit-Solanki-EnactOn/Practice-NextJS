@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+export const metadata = {
+  title: 'About',
+  description: 'About page',
+}
+
 const page = () => {
   return (
     <>
