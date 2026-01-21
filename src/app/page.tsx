@@ -1,11 +1,8 @@
 'use client'
+import UseContext from "@/components/UseContext/UseContext";
+import UseEffect from "@/components/UseEffect/UseEffect";
 import React, { useRef } from "react";
-import Employee from "@/components/employee"
-import User from "@/components/user";
-import HookCounter from "@/components/UseEffect/HookCounter";
-import HookMouse from "@/components/UseEffect/HookMouse";
-import MouseContainer from "@/components/UseEffect/MouseContainer";
-import DataFetching from "@/components/UseEffect/DataFetching";
+
 
 export default function Home() {
     const showEmployee = true;
@@ -41,16 +38,12 @@ export default function Home() {
             <User ref={inputRef} />
             <button onClick={updateInput}>Update input box</button> */}
 
+            {/* UseEffect */}
+            {/* <UseEffect /> */}
 
-            {/* <p>UseEffect</p>
-            <HookCounter /> */}
+            {/* UseContext */}
+            <UseContext />
 
-            {/* <HookMouse /> */}
-
-            {/* <MouseContainer /> */}
-
-            {/* Data Fetching using useEffect */}
-            <DataFetching />
         </div>
     )
 }
