@@ -25,7 +25,8 @@ const DataFetching = () => {
 
   function handleFetchButton() {
     console.log('hello')
-    setIdFromButtonClick(id)
+
+    setIdFromButtonClick(parseInt(id))
     console.log(id)
   }
 
@@ -35,11 +36,11 @@ const DataFetching = () => {
 
   return (
     <div>
-      <input 
-        type='text' 
-        placeholder="id" 
-        value={id} 
-        onChange={handleInputChange} 
+      <input
+        type='text'
+        placeholder="id"
+        value={id}
+        onChange={handleInputChange}
         className='border p-2 mr-2'
       />
       <button type='button' className='bg-blue-300 p-2' onClick={handleFetchButton}>Fetch</button>
