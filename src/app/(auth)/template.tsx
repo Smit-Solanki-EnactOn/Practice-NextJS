@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const navLink = [
   { name: "Register", href: "/register" },
@@ -15,8 +16,10 @@ export default function AuthLayout({
 }>) {
 
   const pathname = usePathname();
+  const [input, setInput] = useState('');
   return (
     <>
+      <input  type="text" value={input} onChange={(e) => setInput(e.target.value)} />
       <div className="flex gap-5">
         {navLink.map((link) => {
           const isActive = pathname.startsWith(link.href)

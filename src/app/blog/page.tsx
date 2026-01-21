@@ -1,9 +1,10 @@
 import React from 'react'
 
-const page = () => {
+export default async function page() {
+   await new Promise((resolve) => {
+    setTimeout(resolve, 3000);
+   })
   return (
     <div>Blog Page</div>
   )
 }
-
-export default page

@@ -1,11 +1,17 @@
 import Image from 'next/image'
+import { cookies } from 'next/headers'
 
 export const metadata = {
   title: 'About',
   description: 'About page',
 }
 
-const page = () => {
+export default async function page() {
+
+  const cookieStore = await cookies();
+  const theme = cookieStore.get('theme');
+  console.log(theme)
+
   return (
     <>
       <div>About Page</div>
@@ -13,5 +19,3 @@ const page = () => {
     </>
   )
 }
-
-export default page
