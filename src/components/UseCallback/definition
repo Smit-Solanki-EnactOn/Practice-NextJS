@@ -1,0 +1,1 @@
+useCallback is a React hook that memoizes a callback function, preventing unnecesarry re-render unless its dependencies changes.
